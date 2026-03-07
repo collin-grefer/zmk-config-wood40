@@ -1,2 +1,8 @@
-config SHIELD_WOOD40
-    def_bool $(shields_list_contains, wood40)
+# Copyright (c) 2020 Pete Johanson
+# SPDX-License-Identifier: MIT
+
+config SHIELD_WOOD40_LEFT
+    def_bool $(shields_list_contains,wood40_left)
+
+config SHIELD_WOOD40_RIGHT
+    def_bool $(shields_list_contains,wood40_right)
