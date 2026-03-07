@@ -37,13 +37,13 @@
             RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4)
         >;
 
-        #binding-cells = <2>;
+        // #binding-cells = <2>;
 
-        bindings = <&kp A>, <&kp S>, <&kp D>, <&kp F>, <&kp G>,
-                   <&kp Q>, <&kp W>, <&kp E>, <&kp R>, <&kp T>,
-                   <&kp Z>, <&kp X>, <&kp C>, <&kp V>, <&kp B>,
-                   <&kp LCTRL>, <&kp LALT>, <&kp LGUI>, <&kp LSHIFT>, &transfn;
+        // bindings = <&kp A>, <&kp S>, <&kp D>, <&kp F>, <&kp G>,
+        //            <&kp Q>, <&kp W>, <&kp E>, <&kp R>, <&kp T>,
+        //            <&kp Z>, <&kp X>, <&kp C>, <&kp V>, <&kp B>,
+        //            <&kp LCTRL>, <&kp LALT>, <&kp LGUI>, <&kp LSHIFT>, &transfn;
 
-        behaviors = <&hold_tap>;
+        // behaviors = <&hold_tap>;
     };
 };
