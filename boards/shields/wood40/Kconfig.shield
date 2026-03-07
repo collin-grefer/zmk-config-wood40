@@ -1,0 +1,2 @@
+config SHIELD_WOOD40
+    def_bool $(shields_list_contains, wood40)

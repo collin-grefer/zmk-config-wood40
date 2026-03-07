@@ -14,9 +14,12 @@
 
         default-layer = <0>;
 
-        /* 4 rows × 5 cols (right half) — simplified complement to woody_left */
         layers = <
             /* layer 0 */
+            &kp Y  &kp Z  &kp U  &kp A  &kp Q
+            &kp C  &kp S  &kp I  &kp E  &kp O
+            &kp ESC &kp TAB &kp SPC &kp RSHIFT &kp ESC
+            &kp TRNS  &kp MINUS  &kp LSHIFT  &kp SPACE  &kp TAB
             &kp M  &kp N  &kp O  &kp P  &kp ENTER
             &kp G  &kp H  &kp J  &kp K  &kp L
             &kp B  &kp T  &kp Y  &kp U  &kp I
