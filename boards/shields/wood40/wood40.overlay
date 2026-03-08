@@ -13,7 +13,6 @@
 
     kscan0: kscan {
         compatible = "zmk,kscan-gpio-matrix";
-        label = "kscan0";
         diode-direction = "col2row";
 
         row-gpios = <&gpio0 17 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
@@ -30,7 +29,6 @@
 
     transform_left: matrix_transform_left {
         compatible = "zmk,matrix-transform";
-        label = "transform_left";
         rows = <4>;
         columns = <5>;
         map = <
@@ -43,7 +41,6 @@
 
     transform_right: matrix_transform_right {
         compatible = "zmk,matrix-transform";
-        label = "transform_right";
         rows = <4>;
         columns = <5>;
         map = <
