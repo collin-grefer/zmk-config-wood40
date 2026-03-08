@@ -5,7 +5,19 @@ config ZMK_KEYBOARD_NAME
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
+# Core buses/input used by PMW3610
+config SPI
+    default y
+config INPUT
+    default y
 
+# ZMK pointing stack (symbol names can vary by module/version)
+config ZMK_POINTING
+    default y
+
+# If your PMW3610 module defines a driver symbol, enable it here:
+# config ZMK_PMW3610
+# 	default y
 endif
 
 if SHIELD_WOOD40_LEFT || SHIELD_WOOD40_RIGHT

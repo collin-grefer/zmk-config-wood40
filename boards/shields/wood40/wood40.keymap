@@ -18,7 +18,7 @@
                 &kp M    &kp N    &kp O    &kp P      &kp ENTER
                 &kp G    &kp H    &kp J    &kp K      &kp L
                 &kp B    &kp T    &kp Y    &kp U      &kp I
-                &kp ESC  &kp TAB  &kp SPC  &kp RSHIFT &mo 1
+                &kp ESC  &kp TAB  &kp SPC  &kp RSHIFT &bootloader
             >;
         };
     };
