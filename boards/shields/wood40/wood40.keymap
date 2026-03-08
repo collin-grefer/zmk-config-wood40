@@ -8,20 +8,17 @@
 
         default_layer {
             bindings = <
-                /* layer 0 */
-                &kp M  &kp N  &kp O  &kp P  &kp ENTER
-                &kp G  &kp H  &kp J  &kp K  &kp L
-                &kp B  &kp T  &kp Y  &kp U  &kp I
-                &kp ESC &kp TAB &kp SPC &kp RSHIFT &mo 1
-            >;
-        };
+                /* left half (4x5) */
+                &kp Y    &kp Z    &kp U    &kp A      &kp Q
+                &kp C    &kp S    &kp I    &kp E      &kp O
+                &kp ESC  &kp TAB  &kp SPC  &kp RSHIFT &kp ESC
+                &kp TRNS &kp MINUS &kp LSHIFT &kp SPACE &kp TAB
 
-        bt_layer {
-            bindings = <
-                &bt BT_CLR, &none, &none, &none, &bootloader
-                &none, &none, &none, &none, &none
-                &none, &none, &none, &none, &mo 0
-                &bt BT_SEL 1, &bt BT_SEL 2, &bt BT_SEL 3, &bt BT_SEL 4, &bt BT_SEL 5
+                /* right half (4x5) */  
+                &kp M    &kp N    &kp O    &kp P      &kp ENTER
+                &kp G    &kp H    &kp J    &kp K      &kp L
+                &kp B    &kp T    &kp Y    &kp U      &kp I
+                &kp ESC  &kp TAB  &kp SPC  &kp RSHIFT &mo 1
             >;
         };
     };
