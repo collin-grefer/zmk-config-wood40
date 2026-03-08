@@ -11,7 +11,7 @@
     kscan0: kscan {
         compatible = "zmk,kscan-gpio-matrix";
         diode-direction = "row2col";
-        col-drive-inactive;
+        // col-drive-inactive; // removed for now. supported in future versions
 
         /* row2col: rows are driven, cols are sensed */
         row-gpios = <&gpio0 17 GPIO_ACTIVE_HIGH>,
