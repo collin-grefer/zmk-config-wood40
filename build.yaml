@@ -20,4 +20,6 @@
 ---
 include:
   - board: nice_nano_v2
-    shield: wood40
+    shield: wood40_left
+  - board: nice_nano_v2
+    shield: wood40_right
