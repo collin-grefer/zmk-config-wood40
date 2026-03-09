@@ -7,10 +7,10 @@
 
         default_layer {
             bindings = <
-                &kp P    &kp B    &kp M    &kp L      &bootloader
-                &kp D    &kp T    &kp N    &kp R      &kp H
-                &kp ENTER    &kp G    &kp F    &kp J      &kp K
-                &kp DEL  &kp BSP  &kp RSHFT  &dot &comma
+                &kp P       &kp B     &kp M      &kp L    &bootloader
+                &kp D       &kp T     &kp N      &kp R    &kp H
+                &kp ENTER   &kp G     &kp F      &kp J    &kp K
+                &kp DEL     &kp BSPC  &kp RSHFT  &kp DOT  &kp COMMA
             >;
         };
     };
