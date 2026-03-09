@@ -10,6 +10,8 @@
         group1 {
             psels = <NRF_PSEL(SPIM_SCK, 0, 6)>,
                     <NRF_PSEL(SPIM_MOSI, 0, 8)>;
+            // Add MISO if your breakout exposes it:
+            // psels = <NRF_PSEL(SPIM_MISO, 0, <pin>)>, ...
         };
     };
 
@@ -24,12 +26,16 @@
 
 &spi0 {
     status = "okay";
+    pinctrl-0 = <&spi0_default>;
+    pinctrl-1 = <&spi0_sleep>;
+    pinctrl-names = "default", "sleep";
+    cs-gpios = <&gpio0 2 GPIO_ACTIVE_LOW>;
 
     pmw3610: pmw3610@0 {
         compatible = "pixart,pmw3610";
         reg = <0>;
         spi-max-frequency = <2000000>;
         irq-gpios = <&gpio0 22 GPIO_ACTIVE_LOW>;
-        /* remove reset-gpios; binding does not allow it */
+        // no reset-gpios (not supported by your binding)
     };
 };
