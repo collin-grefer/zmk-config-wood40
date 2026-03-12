@@ -19,9 +19,9 @@
 #
 ---
 include:
-  - board: nice_nano_v2
+  - board: nice_nano
     shield: wood40_left
     artifact-name: wood40_left
-  - board: nice_nano_v2
+  - board: nice_nano
     shield: wood40_right nice_view
     artifact-name: wood40_right
