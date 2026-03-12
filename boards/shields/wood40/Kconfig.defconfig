@@ -11,6 +11,7 @@ config SPI
 config INPUT
     default y
 
+
 # ZMK pointing stack (symbol names can vary by module/version)
 config ZMK_POINTING
     default y
@@ -25,31 +26,11 @@ if SHIELD_WOOD40_LEFT || SHIELD_WOOD40_RIGHT
 config ZMK_SPLIT
     default y
 
-# if ZMK_DISPLAY
+if ZMK_DISPLAY
 
-# config I2C
-#     default y
+config SPI
+    default y
 
-# config SSD1306
-#     default y
-
-# endif # ZMK_DISPLAY
-
-# if LVGL
-
-# config LV_Z_VDB_SIZE
-#     default 64
-
-# config LV_DPI_DEF
-#     default 148
-
-# config LV_Z_BITS_PER_PIXEL
-#     default 1
-
-# choice LV_COLOR_DEPTH
-#     default LV_COLOR_DEPTH_1
-# endchoice
-
-# endif # LVGL
+endif # ZMK_DISPLAY
 
 endif
