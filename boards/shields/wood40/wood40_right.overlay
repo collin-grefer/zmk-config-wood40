@@ -7,7 +7,6 @@
         zmk,kscan = &kscan0;
         zmk,transform = &default_transform;
         zmk,matrix-transform = &default_transform;
-        zmk,display = &nice_view;
     };
 
     kscan0: kscan {
