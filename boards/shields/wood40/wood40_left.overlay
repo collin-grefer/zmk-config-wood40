@@ -3,7 +3,7 @@
 
 / {
     chosen {
-        zmk,kscan = &kscan0;
+        zmk,kscan = &kscan;
         zmk,matrix-transform = &wood40_transform;
     };
 
@@ -25,6 +25,6 @@
     };
 };
 
-&kscan0 {
+&kscan {
     col-offset = <0>;
 };
