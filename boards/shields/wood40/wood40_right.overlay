@@ -1,5 +1,6 @@
 #include <dt-bindings/gpio/gpio.h>
 #include <dt-bindings/zmk/matrix_transform.h>
+#include <zephyr/dt-bindings/pinctrl/nrf-pinctrl.h>
 #include "mouse.dtsi"
 
 / {
@@ -36,4 +37,30 @@
             RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4)
         >;
     };
+};
+
+&pinctrl {
+    spi1_default: spi1_default {
+        group1 {
+            psels = <NRF_PSEL(SPIM_SCK,  1, 13)>,
+                    <NRF_PSEL(SPIM_MOSI, 1, 11)>;
+        };
+    };
+
+    spi1_sleep: spi1_sleep {
+        group1 {
+            psels = <NRF_PSEL(SPIM_SCK,  1, 13)>,
+                    <NRF_PSEL(SPIM_MOSI, 1, 11)>;
+            low-power-enable;
+        };
+    };
+};
+
+&nice_view_spi {
+    status = "okay";
+    compatible = "nordic,nrf-spim";
+    pinctrl-0 = <&spi1_default>;
+    pinctrl-1 = <&spi1_sleep>;
+    pinctrl-names = "default", "sleep";
+    cs-gpios = <&gpio0 31 GPIO_ACTIVE_HIGH>;
 };
