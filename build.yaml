@@ -25,3 +25,9 @@ include:
   - board: nice_nano
     shield: wood40_right
     artifact-name: wood40_right
+
+on: [workflow_dispatch]
+
+jobs:
+  build:
+    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
