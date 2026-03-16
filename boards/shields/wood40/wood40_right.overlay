@@ -7,6 +7,7 @@
     chosen {
         zmk,kscan = &kscan0;
         zmk,matrix-transform = &wood40_transform;
+        zmk,ext-power = &ext_power;
     };
 
     kscan0: kscan {
@@ -40,6 +41,12 @@
             RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,4)
             RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4)
         >;
+    };
+
+    ext_power: ext_power {
+        compatible = "zmk,ext-power-generic";
+        control-gpios = <&gpio0 31 GPIO_ACTIVE_HIGH>; // example pin
+        init-delay-ms = <150>;                         // example delay
     };
 };
 
