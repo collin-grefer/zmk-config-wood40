@@ -8,9 +8,9 @@
 #define LAYER_MOUSE     1
 #define LAYER_NUMBLOCK  2
 #define LAYER_SYMBOLS1  3
-#define LAYER_FUNCTION  4
-#define LAYER_ARROW     5
-#define LAYER_SYMBOLS2  6
+#define LAYER_SYMBOLS2  4
+#define LAYER_FUNCTION  5
+#define LAYER_ARROW     6
 #define LAYER_GAME      7
 #define LAYER_MEDIA     8
 #define LAYER_BLUETOOTH 9
@@ -24,7 +24,7 @@
                 &kp DE_Z              &kp DE_Y              &lt LAYER_NUMBLOCK DE_U    &lt LAYER_SYMBOLS1 DE_A      &mt LCTRL DE_Q
                 &kp DE_C              &kp DE_S              &kp DE_I                   &kp DE_E                     &lt LAYER_FUNCTION DE_O
                 &kp DE_V              &kp DE_X              &kp DE_U_UMLAUT            &lt LAYER_SYMBOLS2 DE_A_UMLAUT  &mt LALT ESC
-                &lt LAYER_BLUETOOTH TAB  &kp DE_MINUS       &mt LSHFT DE_O_UMLAUT     &lt LAYER_ARROW SPACE        &lt LAYER_MOUSE TAB
+                &kp TAB               &kp DE_MINUS       &mt LSHFT DE_O_UMLAUT     &lt LAYER_ARROW SPACE        &lt LAYER_MOUSE TAB
 
                 &mt RCTRL DE_P        &lt LAYER_MEDIA DE_B  &kp DE_M                   &kp DE_L                     &mt LGUI DE_SHARP_S
                 &kp DE_D              &kp DE_T              &kp DE_N                   &kp DE_R                     &kp DE_H
@@ -68,10 +68,25 @@
                 &trans          &trans          &trans          &trans          &trans
                 &trans          &trans          &trans          &trans          &trans
 
-                &kp DE_EQUAL    &kp DE_LBRC     &kp DE_RBRC     &kp DE_LPAR     &kp DE_RPAR
-                &kp DE_HASH     &kp DE_LPAR     &kp DE_RPAR     &kp DE_RBKT     &kp DE_PRCNT
-                &kp DE_DQT      &kp DE_LBKT     &kp DE_RBKT     &caps_word      &kp DE_GRAVE
+                &kp DE_GRAVE    &kp DE_LBRC     &kp DE_RBRC     &kp DE_ASTRK     &kp DE_TILDE
+                &kp DE_SQT     &kp DE_LPAR     &kp DE_RPAR     &kp DE_PLUS     &kp DE_PRCNT
+                &kp DE_DQT      &kp DE_LBKT     &kp DE_RBKT     &trans      &kp DE_CARET
+                &caps_word          &trans          &trans          &trans          &trans
+            >;
+        };
+
+        Druck Appl &trans &trans &trans
+        symbols2_layer {
+            bindings = <
+                &trans          &trans          &kp LSHFT       &trans          &trans
                 &trans          &trans          &trans          &trans          &trans
+                &trans          &trans          &trans          &trans          &trans
+                &trans          &trans          &trans          &trans          &trans
+
+                &kp DE_AT       &kp DE_FSLH     &kp DE_AMPS     &kp DE_PIPE     &kp DE_BACKSLASH
+                &kp DE_SEMI       &kp DE_LPAR     &kp DE_RPAR    &kp DE_PLUS       &kp DE_HASH
+                &kp DE_LT       &kp DE_GT       &kp DE_COLON       &kp DE_DLLR     &kp DE_EURO
+                &kp PSCRN       &kp K_APP       &trans          &trans          &trans
             >;
         };
 
@@ -100,20 +115,6 @@
                 &kp PG_DN       &kp LEFT        &kp DOWN        &kp RIGHT       &trans
                 &trans          &kp BSPC        &kp DEL         &trans          &trans
                 &trans          &kp LSHFT       &kp LCTRL       &trans          &trans
-            >;
-        };
-
-        symbols2_layer {
-            bindings = <
-                &trans          &trans          &kp LSHFT       &trans          &trans
-                &trans          &trans          &trans          &trans          &trans
-                &trans          &trans          &trans          &trans          &trans
-                &trans          &trans          &trans          &trans          &trans
-
-                &kp DE_AT       &kp DE_EXCL     &kp DE_AMPS     &kp DE_BSLH     &kp DE_TILDE
-                &kp DE_LT       &kp DE_PIPE     &kp DE_UNDER    &kp DE_GT       &kp DE_HASH
-                &kp DE_GT       &kp DE_LT       &kp DE_GT       &kp DE_DLLR     &kp DE_EURO
-                &kp PSCRN       &kp K_APP       &trans          &trans          &trans
             >;
         };
 

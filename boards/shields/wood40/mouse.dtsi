@@ -48,6 +48,7 @@
         y-input-code = <INPUT_REL_Y>;
         swap-xy;
         invert-y;
+        invert-x;
         wakeup-source;
     };
 };
