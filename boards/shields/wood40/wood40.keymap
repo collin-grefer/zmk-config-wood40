@@ -75,7 +75,6 @@
             >;
         };
 
-        Druck Appl &trans &trans &trans
         symbols2_layer {
             bindings = <
                 &trans          &trans          &kp LSHFT       &trans          &trans
