@@ -8,6 +8,11 @@
         compatible = "zmk,input-listener";
         device = <&trackball>;
         input-processors = <&zip_temp_layer 1 500>;
+
+        scroller {
+            layers = <8>;  // LAYER_MEDIA - change to whichever layer you pick
+            input-processors = <&zip_xy_to_scroll_mapper>;
+        };
     };
 };
 
