@@ -10,8 +10,13 @@
         input-processors = <&zip_temp_layer 1 500>;
 
         scroller {
-            layers = <8>;  // LAYER_MEDIA - change to whichever layer you pick
+            layers = <8>;  // LAYER_SCROLL
             input-processors = <&zip_xy_to_scroll_mapper>;
+        };
+
+        sniper {
+            layers = <9>;  // LAYER_SNIPE
+            input-processors = <&zip_xy_scaler 1 4>;  // slow down to 1/4 speed
         };
     };
 };

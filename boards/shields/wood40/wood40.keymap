@@ -13,8 +13,10 @@
 #define LAYER_FUNCTION  5
 #define LAYER_ARROW     6
 #define LAYER_GAME      7
-#define LAYER_MEDIA     8
-#define LAYER_BLUETOOTH 9
+#define LAYER_SCROLL    8
+#define LAYER_SNIPE     9
+#define LAYER_MEDIA     10
+#define LAYER_BLUETOOTH 11
 
 / {
     behaviors {
@@ -40,7 +42,7 @@
                 &mt RCTRL DE_P        &lt LAYER_MEDIA DE_B  &kp DE_M                   &kp DE_L                     &mt LGUI DE_SHARP_S
                 &kp DE_D              &kp DE_T              &kp DE_N                   &kp DE_R                     &kp DE_H
                 &mt LALT RET          &kp DE_G              &kp DE_F                   &kp DE_J                     &kp DE_K
-                &kp DEL               &kp BSPC              &kp DE_W                   &kp DE_COMMA                 &mt RSHFT DE_DOT
+                &kp DEL               &kp BSPC              &kp DE_W                   &lt LAYER_SCROLL DE_COMMA    &lt LAYER_SNIPE DE_DOT
             >;
         };
 
@@ -139,6 +141,34 @@
                 &kp DE_M        &kp DE_I        &kp DE_J        &kp DE_K        &kp DE_N
                 &kp DE_Z        &kp DE_Y        &kp DE_P        &kp DE_L        &to LAYER_HOME
                 &kp DE_O        &mkp MCLK       &kp LALT        &mkp LCLK       &mkp RCLK
+            >;
+        };
+
+        scrolling_layer {
+            bindings = <
+                &trans          &trans          &trans          &trans          &trans
+                &trans          &trans          &trans          &trans          &trans
+                &trans          &trans          &trans          &trans          &trans
+                &trans          &trans          &trans          &trans          &trans
+
+                &trans          &trans          &trans          &trans          &trans
+                &trans          &trans          &trans          &trans          &trans
+                &trans          &trans          &trans          &trans          &trans
+                &trans          &trans          &trans          &trans          &trans
+            >;
+        };
+
+        sniping_layer {
+            bindings = <
+                &trans          &trans          &trans          &trans          &trans
+                &trans          &trans          &trans          &trans          &trans
+                &trans          &trans          &trans          &trans          &trans
+                &trans          &trans          &trans          &trans          &trans
+
+                &trans          &trans          &trans          &trans          &trans
+                &trans          &trans          &trans          &trans          &trans
+                &trans          &trans          &trans          &trans          &trans
+                &trans          &trans          &trans          &trans          &trans
             >;
         };
 
