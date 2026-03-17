@@ -36,8 +36,8 @@
             bindings = <
                 &kp DE_Z              &kp DE_Y                &lt LAYER_NUMBLOCK DE_U       &lt LAYER_SYMBOLS1 DE_A         &mt LCTRL DE_Q
                 &kp DE_C              &kp DE_S                &kp DE_I                      &kp DE_E                        &lt LAYER_FUNCTION DE_O
-                &kp DE_V              &lt LAYER_SCROLL DE_X   &lt LAYER_SNIPE DE_U_UMLAUT   &lt LAYER_SYMBOLS2 DE_A_UMLAUT  &mt LALT ESC
-                &mt LSHFT DE_SHARP_S  &kp DE_MINUS            &kp DE_O_UMLAUT               &lt LAYER_ARROW SPACE           &lt LAYER_MOUSE TAB
+                &kp DE_V              &lt LAYER_SCROLL DE_X   &kp DE_U_UMLAUT   &lt LAYER_SYMBOLS2 DE_A_UMLAUT  &mt LALT ESC
+                &mt LSHFT DE_SHARP_S  &lt LAYER_SNIPE DE_MINUS            &kp DE_O_UMLAUT               &lt LAYER_ARROW SPACE           &lt LAYER_MOUSE TAB
 
                 &mt RCTRL DE_P        &lt LAYER_MEDIA DE_B  &kp DE_M                   &kp DE_L                     &mt LGUI DE_SHARP_S
                 &kp DE_D              &kp DE_T              &kp DE_N                   &kp DE_R                     &kp DE_H
@@ -50,8 +50,8 @@
             bindings = <
                 &trans          &trans          &trans          &trans          &trans
                 &trans          &trans          &mkp RCLK       &mkp LCLK       &mkp MCLK
-                &trans          &trans          &mkp MB4        &mkp MB5        &trans
-                &tog LAYER_MOUSE  &trans        &trans          &trans          &trans
+                &trans          &lt LAYER_SCROLL          &mkp MB4        &mkp MB5        &trans
+                &tog LAYER_HOME  &lt LAYER_SNIPE         &trans          &trans          &trans
 
                 &kp LSHFT       &kp LCTRL       &mmv MOVE_UP    &mkp RCLK       &mkp MCLK
                 &msc SCRL_UP    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT &trans
@@ -147,28 +147,28 @@
         scrolling_layer {
             bindings = <
                 &trans          &trans          &trans          &trans          &trans
-                &trans          &trans          &trans          &trans          &trans
-                &trans          &trans          &trans          &trans          &trans
-                &trans          &trans          &trans          &trans          &trans
+                &trans          &trans          &mkp RCLK       &mkp LCLK       &mkp MCLK
+                &trans          &trans          &mkp MB4        &mkp MB5        &trans
+                &tog LAYER_MOUSE  &trans        &trans          &trans          &trans
 
-                &trans          &trans          &trans          &trans          &trans
-                &trans          &trans          &trans          &trans          &trans
-                &trans          &trans          &trans          &trans          &trans
-                &trans          &trans          &trans          &trans          &trans
+                &kp LSHFT       &kp LCTRL       &mmv MOVE_UP    &mkp RCLK       &mkp MCLK
+                &msc SCRL_UP    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT &trans
+                &msc SCRL_DOWN  &msc SCRL_LEFT  &msc SCRL_RIGHT &trans          &trans
+                &trans          &mkp LCLK       &mkp MCLK          &mkp LCLK       &mkp RCLK
             >;
         };
 
         sniping_layer {
             bindings = <
                 &trans          &trans          &trans          &trans          &trans
-                &trans          &trans          &trans          &trans          &trans
-                &trans          &trans          &trans          &trans          &trans
-                &trans          &trans          &trans          &trans          &trans
+                &trans          &trans          &mkp RCLK       &mkp LCLK       &mkp MCLK
+                &trans          &trans          &mkp MB4        &mkp MB5        &trans
+                &tog LAYER_MOUSE  &trans        &trans          &trans          &trans
 
-                &trans          &trans          &trans          &trans          &trans
-                &trans          &trans          &trans          &trans          &trans
-                &trans          &trans          &trans          &trans          &trans
-                &trans          &trans          &trans          &trans          &trans
+                &kp LSHFT       &kp LCTRL       &mmv MOVE_UP    &mkp RCLK       &mkp MCLK
+                &msc SCRL_UP    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT &trans
+                &msc SCRL_DOWN  &msc SCRL_LEFT  &msc SCRL_RIGHT &trans          &trans
+                &trans          &mkp LCLK       &mkp MCLK          &mkp LCLK       &mkp RCLK
             >;
         };
 
