@@ -25,12 +25,12 @@
                 &kp DE_Z              &kp DE_Y              &lt LAYER_NUMBLOCK DE_U    &lt LAYER_SYMBOLS1 DE_A      &mt LCTRL DE_Q
                 &kp DE_C              &kp DE_S              &kp DE_I                   &kp DE_E                     &lt LAYER_FUNCTION DE_O
                 &kp DE_V              &kp DE_X              &kp DE_U_UMLAUT            &lt LAYER_SYMBOLS2 DE_A_UMLAUT  &mt LALT ESC
-                &kp TAB               &kp DE_MINUS       &mt LSHFT DE_O_UMLAUT     &lt LAYER_ARROW SPACE        &lt LAYER_MOUSE TAB
+                &mt LSHFT DE_SHARP_S  &kp DE_MINUS          &kp DE_O_UMLAUT            &lt LAYER_ARROW SPACE        &lt LAYER_MOUSE TAB
 
                 &mt RCTRL DE_P        &lt LAYER_MEDIA DE_B  &kp DE_M                   &kp DE_L                     &mt LGUI DE_SHARP_S
                 &kp DE_D              &kp DE_T              &kp DE_N                   &kp DE_R                     &kp DE_H
                 &mt LALT RET          &kp DE_G              &kp DE_F                   &kp DE_J                     &kp DE_K
-                &kp DEL               &kp BSPC              &mt RSHFT DE_W             &kp DE_DOT                   &kp DE_COMMA
+                &kp DEL               &kp BSPC              &kp DE_W                   &kp DE_COMMA                 &mt RSHFT DE_DOT
             >;
         };
 
@@ -44,7 +44,7 @@
                 &kp LSHFT       &kp LCTRL       &mmv MOVE_UP    &mkp RCLK       &mkp MCLK
                 &msc SCRL_UP    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT &trans
                 &msc SCRL_DOWN  &msc SCRL_LEFT  &msc SCRL_RIGHT &trans          &trans
-                &trans          &mkp LCLK       &trans          &mkp LCLK       &mkp RCLK
+                &trans          &mkp LCLK       &MCLK          &mkp LCLK       &mkp RCLK
             >;
         };
 
@@ -84,8 +84,8 @@
                 &trans          &trans          &trans          &trans          &trans
 
                 &kp DE_AT       &kp DE_FSLH     &kp DE_AMPS     &kp DE_PIPE     &kp DE_BACKSLASH
-                &kp DE_SEMI       &kp DE_LPAR     &kp DE_RPAR    &kp DE_PLUS       &kp DE_HASH
-                &kp DE_LT       &kp DE_GT       &kp DE_COLON       &kp DE_DLLR     &kp DE_EURO
+                &kp DE_SEMI       &kp DE_EXCL     &kp DE_QMARK    &kp DE_EQUAL       &kp DE_HASH
+                &kp DE_COLON     &kp DE_LT       &kp DE_GT       &kp DE_DLLR     &kp DE_EURO
                 &kp PSCRN       &kp K_APP       &trans          &trans          &trans
             >;
         };
