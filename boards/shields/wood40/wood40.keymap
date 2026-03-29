@@ -29,6 +29,24 @@
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
         };
+
+        cpi_low_from_home: cpi_low_from_home {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to LAYER_MOUSE &tog LAYER_CPI_LOW>;
+        };
+
+        cpi_mid_from_home: cpi_mid_from_home {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to LAYER_MOUSE &tog LAYER_CPI_MID>;
+        };
+
+        cpi_high_from_home: cpi_high_from_home {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to LAYER_MOUSE &tog LAYER_CPI_HIGH>;
+        };
     };
 
     combos {
@@ -37,21 +55,21 @@
         combo_cpi_low {
             timeout-ms = <50>;
             key-positions = <1 19>;   // RC(0,6) + RC(3,9)
-            bindings = <&to LAYER_CPI_LOW>;
+            bindings = <&cpi_low_from_home>;
             layers = <LAYER_HOME>;
         };
 
         combo_cpi_mid {
             timeout-ms = <50>;
             key-positions = <2 19>;   // RC(0,7) + RC(3,9)
-            bindings = <&to LAYER_CPI_MID>;
+            bindings = <&cpi_mid_from_home>;
             layers = <LAYER_HOME>;
         };
 
         combo_cpi_high {
             timeout-ms = <50>;
             key-positions = <3 19>;   // RC(0,8) + RC(3,9)
-            bindings = <&to LAYER_CPI_HIGH>;
+            bindings = <&cpi_high_from_home>;
             layers = <LAYER_HOME>;
         };
     };
@@ -78,7 +96,7 @@
                 &trans              &trans              &trans              &trans              &trans
                 &trans              &trans              &mkp RCLK           &mkp LCLK           &mkp MCLK
                 &trans              &mo LAYER_SCROLL    &mkp MB4            &mkp MB5            &trans
-                &to LAYER_HOME     &trans              &trans              &trans              &to LAYER_MOUSE
+                &to LAYER_HOME      &trans              &trans              &trans              &tog LAYER_MOUSE
 
                 &kp LSHFT           &kp LCTRL           &mmv MOVE_UP        &mkp RCLK           &mkp MCLK
                 &msc SCRL_UP        &mmv MOVE_LEFT      &mmv MOVE_DOWN      &mmv MOVE_RIGHT     &trans
@@ -190,8 +208,7 @@
                 &trans              &trans              &trans              &trans              &trans
                 &trans              &trans              &mkp RCLK           &mkp LCLK           &mkp MCLK
                 &trans              &mo LAYER_SCROLL    &mkp MB4            &mkp MB5            &trans
-                &to LAYER_HOME     &trans              &trans              &trans              &to LAYER_MOUSE
-
+                &to LAYER_HOME     &trans              &trans              &trans              &tog LAYER_CPI_LOW
                 &kp LSHFT           &kp LCTRL           &mmv MOVE_UP        &mkp RCLK           &mkp MCLK
                 &msc SCRL_UP        &mmv MOVE_LEFT      &mmv MOVE_DOWN      &mmv MOVE_RIGHT     &trans
                 &msc SCRL_DOWN      &msc SCRL_LEFT      &msc SCRL_RIGHT     &trans              &trans
@@ -204,8 +221,7 @@
                 &trans              &trans              &trans              &trans              &trans
                 &trans              &trans              &mkp RCLK           &mkp LCLK           &mkp MCLK
                 &trans              &mo LAYER_SCROLL    &mkp MB4            &mkp MB5            &trans
-                &to LAYER_HOME     &trans              &trans              &trans              &to LAYER_MOUSE
-
+                &to LAYER_HOME     &trans              &trans              &trans              &tog LAYER_CPI_MID
                 &kp LSHFT           &kp LCTRL           &mmv MOVE_UP        &mkp RCLK           &mkp MCLK
                 &msc SCRL_UP        &mmv MOVE_LEFT      &mmv MOVE_DOWN      &mmv MOVE_RIGHT     &trans
                 &msc SCRL_DOWN      &msc SCRL_LEFT      &msc SCRL_RIGHT     &trans              &trans
@@ -218,8 +234,7 @@
                 &trans              &trans              &trans              &trans              &trans
                 &trans              &trans              &mkp RCLK           &mkp LCLK           &mkp MCLK
                 &trans              &mo LAYER_SCROLL    &mkp MB4            &mkp MB5            &trans
-                &to LAYER_HOME     &trans              &trans              &trans              &to LAYER_MOUSE
-
+                &to LAYER_HOME     &trans              &trans              &trans              &tog LAYER_CPI_HIGH
                 &kp LSHFT           &kp LCTRL           &mmv MOVE_UP        &mkp RCLK           &mkp MCLK
                 &msc SCRL_UP        &mmv MOVE_LEFT      &mmv MOVE_DOWN      &mmv MOVE_RIGHT     &trans
                 &msc SCRL_DOWN      &msc SCRL_LEFT      &msc SCRL_RIGHT     &trans              &trans
@@ -246,7 +261,7 @@
                 &trans              &trans              &trans              &trans              &trans
                 &trans              &trans              &trans              &trans              &trans
                 &trans              &trans              &trans              &trans              &trans
-                &trans              &trans              &trans              &trans              &trans
+                &to LAYER_HOME      &trans              &trans              &trans              &trans
 
                 &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4
                 &trans          &trans          &trans          &trans          &trans
