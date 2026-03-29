@@ -37,21 +37,21 @@
         combo_cpi_low {
             timeout-ms = <50>;
             key-positions = <1 19>;   // RC(0,6) + RC(3,9)
-            bindings = <&tog LAYER_CPI_LOW>;
+            bindings = <&to LAYER_CPI_LOW>;
             layers = <LAYER_HOME>;
         };
 
         combo_cpi_mid {
             timeout-ms = <50>;
             key-positions = <2 19>;   // RC(0,7) + RC(3,9)
-            bindings = <&tog LAYER_CPI_MID>;
+            bindings = <&to LAYER_CPI_MID>;
             layers = <LAYER_HOME>;
         };
 
         combo_cpi_high {
             timeout-ms = <50>;
             key-positions = <3 19>;   // RC(0,8) + RC(3,9)
-            bindings = <&tog LAYER_CPI_HIGH>;
+            bindings = <&to LAYER_CPI_HIGH>;
             layers = <LAYER_HOME>;
         };
     };
@@ -78,7 +78,7 @@
                 &trans              &trans              &trans              &trans              &trans
                 &trans              &trans              &mkp RCLK           &mkp LCLK           &mkp MCLK
                 &trans              &mo LAYER_SCROLL    &mkp MB4            &mkp MB5            &trans
-                &tog LAYER_HOME     &trans              &trans              &trans              &tog LAYER_MOUSE
+                &to LAYER_HOME     &trans              &trans              &trans              &to LAYER_MOUSE
 
                 &kp LSHFT           &kp LCTRL           &mmv MOVE_UP        &mkp RCLK           &mkp MCLK
                 &msc SCRL_UP        &mmv MOVE_LEFT      &mmv MOVE_DOWN      &mmv MOVE_RIGHT     &trans
@@ -176,7 +176,7 @@
                 &trans              &trans              &trans              &trans              &trans
                 &trans              &trans              &mkp RCLK           &mkp LCLK           &mkp MCLK
                 &trans              &trans              &mkp MB4            &mkp MB5            &trans
-                &tog LAYER_MOUSE    &trans              &trans              &trans              &trans
+                &to LAYER_MOUSE    &trans              &trans              &trans              &trans
 
                 &kp LSHFT           &kp LCTRL           &mmv MOVE_UP        &mkp RCLK           &mkp MCLK
                 &msc SCRL_UP        &mmv MOVE_LEFT      &mmv MOVE_DOWN      &mmv MOVE_RIGHT     &trans
@@ -190,7 +190,7 @@
                 &trans              &trans              &trans              &trans              &trans
                 &trans              &trans              &mkp RCLK           &mkp LCLK           &mkp MCLK
                 &trans              &mo LAYER_SCROLL    &mkp MB4            &mkp MB5            &trans
-                &tog LAYER_HOME     &trans              &trans              &trans              &tog LAYER_MOUSE
+                &to LAYER_HOME     &trans              &trans              &trans              &to LAYER_MOUSE
 
                 &kp LSHFT           &kp LCTRL           &mmv MOVE_UP        &mkp RCLK           &mkp MCLK
                 &msc SCRL_UP        &mmv MOVE_LEFT      &mmv MOVE_DOWN      &mmv MOVE_RIGHT     &trans
@@ -204,7 +204,7 @@
                 &trans              &trans              &trans              &trans              &trans
                 &trans              &trans              &mkp RCLK           &mkp LCLK           &mkp MCLK
                 &trans              &mo LAYER_SCROLL    &mkp MB4            &mkp MB5            &trans
-                &tog LAYER_HOME     &trans              &trans              &trans              &tog LAYER_MOUSE
+                &to LAYER_HOME     &trans              &trans              &trans              &to LAYER_MOUSE
 
                 &kp LSHFT           &kp LCTRL           &mmv MOVE_UP        &mkp RCLK           &mkp MCLK
                 &msc SCRL_UP        &mmv MOVE_LEFT      &mmv MOVE_DOWN      &mmv MOVE_RIGHT     &trans
@@ -218,7 +218,7 @@
                 &trans              &trans              &trans              &trans              &trans
                 &trans              &trans              &mkp RCLK           &mkp LCLK           &mkp MCLK
                 &trans              &mo LAYER_SCROLL    &mkp MB4            &mkp MB5            &trans
-                &tog LAYER_HOME     &trans              &trans              &trans              &tog LAYER_MOUSE
+                &to LAYER_HOME     &trans              &trans              &trans              &to LAYER_MOUSE
 
                 &kp LSHFT           &kp LCTRL           &mmv MOVE_UP        &mkp RCLK           &mkp MCLK
                 &msc SCRL_UP        &mmv MOVE_LEFT      &mmv MOVE_DOWN      &mmv MOVE_RIGHT     &trans
@@ -237,7 +237,7 @@
                 &trans                &trans              &trans              &trans              &trans
                 &trans                &trans              &trans              &trans              &trans
                 &trans                &trans              &trans              &trans              &trans
-                &tog LAYER_BLUETOOTH  &trans              &trans              &trans              &trans
+                &to LAYER_BLUETOOTH  &trans              &trans              &trans              &trans
             >;
         };
 
