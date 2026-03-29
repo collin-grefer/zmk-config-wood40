@@ -14,9 +14,11 @@
 #define LAYER_ARROW     6
 #define LAYER_GAME      7
 #define LAYER_SCROLL    8
-#define LAYER_SNIPE     9
-#define LAYER_MEDIA     10
-#define LAYER_BLUETOOTH 11
+#define LAYER_CPI_LOW   9
+#define LAYER_CPI_MID   10
+#define LAYER_CPI_HIGH  11
+#define LAYER_MEDIA     12
+#define LAYER_BLUETOOTH 13
 
 / {
     behaviors {
@@ -29,43 +31,68 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        combo_cpi_low {
+            timeout-ms = <50>;
+            key-positions = <1 19>;   // RC(0,6) + RC(3,9)
+            bindings = <&tog LAYER_CPI_LOW>;
+            layers = <LAYER_HOME>;
+        };
+
+        combo_cpi_mid {
+            timeout-ms = <50>;
+            key-positions = <2 19>;   // RC(0,7) + RC(3,9)
+            bindings = <&tog LAYER_CPI_MID>;
+            layers = <LAYER_HOME>;
+        };
+
+        combo_cpi_high {
+            timeout-ms = <50>;
+            key-positions = <3 19>;   // RC(0,8) + RC(3,9)
+            bindings = <&tog LAYER_CPI_HIGH>;
+            layers = <LAYER_HOME>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         home_layer {
             bindings = <
-                &kp DE_Z              &kp DE_Y                &lt LAYER_NUMBLOCK DE_U       &lt LAYER_SYMBOLS1 DE_A         &mt LCTRL DE_Q
-                &kp DE_C              &kp DE_S                &kp DE_I                      &kp DE_E                        &lt LAYER_FUNCTION DE_O
-                &kp DE_V              &lt LAYER_SCROLL DE_X   &kp DE_U_UMLAUT   &lt LAYER_SYMBOLS2 DE_A_UMLAUT  &mt LALT ESC
-                &mt LSHFT DE_SHARP_S  &lt LAYER_SNIPE DE_MINUS            &kp DE_O_UMLAUT               &lt LAYER_ARROW SPACE           &lt LAYER_MOUSE TAB
+                &kp DE_Z          &kp DE_Y                     &lt LAYER_NUMBLOCK DE_U       &lt LAYER_SYMBOLS1 DE_A         &mt LCTRL DE_Q
+                &kp DE_C          &kp DE_S                     &kp DE_I                      &kp DE_E                        &lt LAYER_FUNCTION DE_O
+                &kp DE_V          &kp DE_X                     &kp DE_U_UMLAUT               &lt LAYER_SYMBOLS2 DE_A_UMLAUT  &mt LALT ESC
+                &kp DE_SHARP_S    &lt LAYER_SCROLL DE_MINUS    &mt LSHFT DE_O_UMLAUT         &lt LAYER_ARROW SPACE           &lt LAYER_MOUSE TAB
 
-                &mt RCTRL DE_P        &lt LAYER_MEDIA DE_B  &kp DE_M                   &kp DE_L                     &mt LGUI DE_SHARP_S
-                &kp DE_D              &kp DE_T              &kp DE_N                   &kp DE_R                     &kp DE_H
-                &mt LALT RET          &kp DE_G              &kp DE_F                   &kp DE_J                     &kp DE_K
-                &kp DEL               &kp BSPC              &kp DE_W                   &kp DE_COMMA                 &kp DE_DOT
+                &mt RCTRL DE_P    &lt LAYER_MEDIA DE_B  &kp DE_M           &kp DE_L        &mt LGUI DE_SHARP_S
+                &kp DE_D          &kp DE_T              &kp DE_N           &kp DE_R        &kp DE_H
+                &mt LALT RET      &kp DE_G              &kp DE_F           &kp DE_J        &kp DE_K
+                &kp DEL           &kp BSPC              &mt RSHFT DE_W     &kp DE_COMMA    &kp DE_DOT
             >;
         };
 
         mouse_layer {
             bindings = <
-                &trans          &trans          &trans          &trans          &trans
-                &trans          &trans          &mkp RCLK       &mkp LCLK       &mkp MCLK
-                &trans          &mo LAYER_SCROLL &mkp MB4       &mkp MB5        &trans
-                &tog LAYER_HOME  &mo LAYER_SNIPE &trans          &trans          &trans
+                &trans              &trans              &trans              &trans              &trans
+                &trans              &trans              &mkp RCLK           &mkp LCLK           &mkp MCLK
+                &trans              &mo LAYER_SCROLL    &mkp MB4            &mkp MB5            &trans
+                &tog LAYER_HOME     &trans              &trans              &trans              &tog LAYER_MOUSE
 
-                &kp LSHFT       &kp LCTRL       &mmv MOVE_UP    &mkp RCLK       &mkp MCLK
-                &msc SCRL_UP    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT &trans
-                &msc SCRL_DOWN  &msc SCRL_LEFT  &msc SCRL_RIGHT &trans          &trans
-                &trans          &mkp LCLK       &mkp MCLK       &mkp LCLK       &mkp RCLK
+                &kp LSHFT           &kp LCTRL           &mmv MOVE_UP        &mkp RCLK           &mkp MCLK
+                &msc SCRL_UP        &mmv MOVE_LEFT      &mmv MOVE_DOWN      &mmv MOVE_RIGHT     &trans
+                &msc SCRL_DOWN      &msc SCRL_LEFT      &msc SCRL_RIGHT     &trans              &trans
+                &trans              &mkp LCLK           &mkp MCLK           &mkp LCLK           &mkp RCLK
             >;
         };
 
         numblock_layer {
             bindings = <
-                &trans          &trans          &trans          &trans          &trans
-                &trans          &trans          &trans          &trans          &trans
-                &trans          &trans          &trans          &trans          &trans
-                &trans          &trans          &trans          &trans          &trans
+                &trans              &trans              &trans              &trans              &trans
+                &trans              &trans              &trans              &trans              &trans
+                &trans              &trans              &trans              &trans              &trans
+                &trans              &trans              &trans              &trans              &trans
 
                 &kp KP_SLASH    &kp KP_N7       &kp KP_N8       &kp KP_N9       &kp KP_MULTIPLY
                 &kp KP_MINUS    &kp KP_N4       &kp KP_N5       &kp KP_N6       &kp KP_PLUS
@@ -76,52 +103,52 @@
 
         symbols1_layer {
             bindings = <
-                &trans          &trans          &trans          &kp LSHFT       &trans
-                &trans          &trans          &trans          &trans          &trans
-                &trans          &trans          &trans          &trans          &trans
-                &trans          &trans          &trans          &trans          &trans
+                &trans              &trans              &trans              &kp LSHFT           &trans
+                &trans              &trans              &trans              &trans              &trans
+                &trans              &trans              &trans              &trans              &trans
+                &trans              &trans              &trans              &trans              &trans
 
-                &kp DE_GRAVE    &kp DE_LBRC     &kp DE_RBRC     &kp DE_ASTRK     &kp DE_TILDE
-                &kp DE_SQT     &kp DE_LPAR     &kp DE_RPAR     &kp DE_PLUS     &kp DE_PRCNT
-                &kp DE_DQT      &kp DE_LBKT     &kp DE_RBKT     &trans      &kp DE_CARET
-                &caps_word          &trans          &trans          &trans          &trans
+                &kp DE_GRAVE    &kp DE_LBRC     &kp DE_RBRC     &kp DE_ASTRK    &kp DE_TILDE
+                &kp DE_SQT      &kp DE_LPAR     &kp DE_RPAR     &kp DE_PLUS     &kp DE_PRCNT
+                &kp DE_DQT      &kp DE_LBKT     &kp DE_RBKT     &trans          &kp DE_CARET
+                &caps_word      &trans          &trans          &trans          &trans
             >;
         };
 
         symbols2_layer {
             bindings = <
-                &trans          &trans          &kp LSHFT       &trans          &trans
-                &trans          &trans          &trans          &trans          &trans
-                &trans          &trans          &trans          &trans          &trans
-                &trans          &trans          &trans          &trans          &trans
+                &trans              &trans              &kp LSHFT       &trans              &trans
+                &trans              &trans              &trans          &trans              &trans
+                &trans              &trans              &trans          &trans              &trans
+                &trans              &trans              &trans          &trans              &trans
 
                 &kp DE_AT       &kp DE_FSLH     &kp DE_AMPS     &kp DE_PIPE     &kp DE_BACKSLASH
-                &kp DE_SEMI       &kp DE_EXCL     &kp DE_QMARK    &kp DE_EQUAL       &kp DE_HASH
-                &kp DE_COLON     &kp DE_LT       &kp DE_GT       &kp DE_DLLR     &kp DE_EURO
+                &kp DE_SEMI     &kp DE_EXCL     &kp DE_QMARK    &kp DE_EQUAL    &kp DE_HASH
+                &kp DE_COLON    &kp DE_LT       &kp DE_GT       &kp DE_DLLR     &kp DE_EURO
                 &kp PSCRN       &kp K_APP       &trans          &trans          &trans
             >;
         };
 
         function_layer {
             bindings = <
-                &trans          &trans          &trans          &trans          &trans
-                &trans          &trans          &trans          &trans          &trans
-                &trans          &trans          &trans          &trans          &trans
-                &trans          &trans          &trans          &trans          &trans
+                &trans            &trans              &trans              &trans              &trans
+                &trans            &trans              &trans              &trans              &trans
+                &trans            &trans              &trans              &trans              &trans
+                &trans            &trans              &trans              &trans              &trans
 
-                &trans          &kp F1          &kp F2          &kp F3          &kp F4
-                &trans          &kp F5          &kp F6          &kp F7          &kp F8
-                &trans          &kp F9          &kp F10         &kp F11         &kp F12
-                &to LAYER_GAME  &trans          &trans          &trans          &trans
+                &trans            &kp F1          &kp F2          &kp F3          &kp F4
+                &trans            &kp F5          &kp F6          &kp F7          &kp F8
+                &trans            &kp F9          &kp F10         &kp F11         &kp F12
+                &to LAYER_GAME    &trans          &trans          &trans          &trans
             >;
         };
 
         arrow_layer {
             bindings = <
-                &trans          &trans          &trans          &trans          &trans
-                &trans          &trans          &trans          &trans          &trans
-                &trans          &trans          &trans          &trans          &trans
-                &kp BSPC        &kp SPACE       &trans          &trans          &trans
+                &trans        &trans       &trans      &trans     &trans
+                &trans        &trans       &trans      &trans     &trans
+                &trans        &trans       &trans      &trans     &trans
+                &kp BSPC      &kp SPACE    &trans      &trans     &trans
 
                 &kp PG_UP       &kp HOME        &kp UP          &kp END         &trans
                 &kp PG_DN       &kp LEFT        &kp DOWN        &kp RIGHT       &trans
@@ -146,52 +173,80 @@
 
         scrolling_layer {
             bindings = <
-                &trans          &trans          &trans          &trans          &trans
-                &trans          &trans          &mkp RCLK       &mkp LCLK       &mkp MCLK
-                &trans          &trans          &mkp MB4        &mkp MB5        &trans
-                &tog LAYER_MOUSE  &trans        &trans          &trans          &trans
+                &trans              &trans              &trans              &trans              &trans
+                &trans              &trans              &mkp RCLK           &mkp LCLK           &mkp MCLK
+                &trans              &trans              &mkp MB4            &mkp MB5            &trans
+                &tog LAYER_MOUSE    &trans              &trans              &trans              &trans
 
-                &kp LSHFT       &kp LCTRL       &mmv MOVE_UP    &mkp RCLK       &mkp MCLK
-                &msc SCRL_UP    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT &trans
-                &msc SCRL_DOWN  &msc SCRL_LEFT  &msc SCRL_RIGHT &trans          &trans
-                &trans          &mkp LCLK       &mkp MCLK       &mkp LCLK       &mkp RCLK
+                &kp LSHFT           &kp LCTRL           &mmv MOVE_UP        &mkp RCLK           &mkp MCLK
+                &msc SCRL_UP        &mmv MOVE_LEFT      &mmv MOVE_DOWN      &mmv MOVE_RIGHT     &trans
+                &msc SCRL_DOWN      &msc SCRL_LEFT      &msc SCRL_RIGHT     &trans              &trans
+                &trans              &mkp LCLK           &mkp MCLK           &mkp LCLK           &mkp RCLK
             >;
         };
 
-        sniping_layer {
+        cpi_low_layer {
             bindings = <
-                &trans          &trans          &trans          &trans          &trans
-                &trans          &trans          &mkp RCLK       &mkp LCLK       &mkp MCLK
-                &trans          &trans          &mkp MB4        &mkp MB5        &trans
-                &tog LAYER_MOUSE  &trans        &trans          &trans          &trans
+                &trans              &trans              &trans              &trans              &trans
+                &trans              &trans              &mkp RCLK           &mkp LCLK           &mkp MCLK
+                &trans              &mo LAYER_SCROLL    &mkp MB4            &mkp MB5            &trans
+                &tog LAYER_HOME     &trans              &trans              &trans              &tog LAYER_MOUSE
 
-                &kp LSHFT       &kp LCTRL       &mmv MOVE_UP    &mkp RCLK       &mkp MCLK
-                &msc SCRL_UP    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT &trans
-                &msc SCRL_DOWN  &msc SCRL_LEFT  &msc SCRL_RIGHT &trans          &trans
-                &trans          &mkp LCLK       &mkp MCLK       &mkp LCLK       &mkp RCLK
+                &kp LSHFT           &kp LCTRL           &mmv MOVE_UP        &mkp RCLK           &mkp MCLK
+                &msc SCRL_UP        &mmv MOVE_LEFT      &mmv MOVE_DOWN      &mmv MOVE_RIGHT     &trans
+                &msc SCRL_DOWN      &msc SCRL_LEFT      &msc SCRL_RIGHT     &trans              &trans
+                &trans              &mkp LCLK           &mkp MCLK           &mkp LCLK           &mkp RCLK
+            >;
+        };
+
+        cpi_mid_layer {
+            bindings = <
+                &trans              &trans              &trans              &trans              &trans
+                &trans              &trans              &mkp RCLK           &mkp LCLK           &mkp MCLK
+                &trans              &mo LAYER_SCROLL    &mkp MB4            &mkp MB5            &trans
+                &tog LAYER_HOME     &trans              &trans              &trans              &tog LAYER_MOUSE
+
+                &kp LSHFT           &kp LCTRL           &mmv MOVE_UP        &mkp RCLK           &mkp MCLK
+                &msc SCRL_UP        &mmv MOVE_LEFT      &mmv MOVE_DOWN      &mmv MOVE_RIGHT     &trans
+                &msc SCRL_DOWN      &msc SCRL_LEFT      &msc SCRL_RIGHT     &trans              &trans
+                &trans              &mkp LCLK           &mkp MCLK           &mkp LCLK           &mkp RCLK
+            >;
+        };
+
+        cpi_high_layer {
+            bindings = <
+                &trans              &trans              &trans              &trans              &trans
+                &trans              &trans              &mkp RCLK           &mkp LCLK           &mkp MCLK
+                &trans              &mo LAYER_SCROLL    &mkp MB4            &mkp MB5            &trans
+                &tog LAYER_HOME     &trans              &trans              &trans              &tog LAYER_MOUSE
+
+                &kp LSHFT           &kp LCTRL           &mmv MOVE_UP        &mkp RCLK           &mkp MCLK
+                &msc SCRL_UP        &mmv MOVE_LEFT      &mmv MOVE_DOWN      &mmv MOVE_RIGHT     &trans
+                &msc SCRL_DOWN      &msc SCRL_LEFT      &msc SCRL_RIGHT     &trans              &trans
+                &trans              &mkp LCLK           &mkp MCLK           &mkp LCLK           &mkp RCLK
             >;
         };
 
         media_layer {
             bindings = <
-                &trans          &kp C_VOL_UP    &trans          &trans          &trans
-                &trans          &kp C_VOL_DN    &trans          &trans          &trans
-                &trans          &kp C_MUTE      &trans          &trans          &trans
-                &trans          &trans          &kp LCTRL       &trans          &trans
+                &trans              &kp C_VOL_UP    &trans          &trans              &trans
+                &trans              &kp C_VOL_DN    &trans          &trans              &trans
+                &trans              &kp C_MUTE      &trans          &trans              &trans
+                &trans              &trans          &kp LCTRL       &trans              &trans
 
-                &trans          &trans          &trans          &trans          &trans
-                &trans          &trans          &trans          &trans          &trans
-                &trans          &trans          &trans          &trans          &trans
-                &trans          &trans          &trans          &trans          &trans
+                &trans                &trans              &trans              &trans              &trans
+                &trans                &trans              &trans              &trans              &trans
+                &trans                &trans              &trans              &trans              &trans
+                &tog LAYER_BLUETOOTH  &trans              &trans              &trans              &trans
             >;
         };
 
         bluetooth_layer {
             bindings = <
-                &trans          &trans          &trans          &trans          &trans
-                &trans          &trans          &trans          &trans          &trans
-                &trans          &trans          &trans          &trans          &trans
-                &trans          &trans          &trans          &trans          &trans
+                &trans              &trans              &trans              &trans              &trans
+                &trans              &trans              &trans              &trans              &trans
+                &trans              &trans              &trans              &trans              &trans
+                &trans              &trans              &trans              &trans              &trans
 
                 &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4
                 &trans          &trans          &trans          &trans          &trans
