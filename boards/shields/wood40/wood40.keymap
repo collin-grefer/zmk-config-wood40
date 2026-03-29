@@ -50,13 +50,13 @@
             bindings = <
                 &trans          &trans          &trans          &trans          &trans
                 &trans          &trans          &mkp RCLK       &mkp LCLK       &mkp MCLK
-                &trans          &lt LAYER_SCROLL          &mkp MB4        &mkp MB5        &trans
-                &tog LAYER_HOME  &lt LAYER_SNIPE         &trans          &trans          &trans
+                &trans          &mo LAYER_SCROLL &mkp MB4       &mkp MB5        &trans
+                &tog LAYER_HOME  &mo LAYER_SNIPE &trans          &trans          &trans
 
                 &kp LSHFT       &kp LCTRL       &mmv MOVE_UP    &mkp RCLK       &mkp MCLK
                 &msc SCRL_UP    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT &trans
                 &msc SCRL_DOWN  &msc SCRL_LEFT  &msc SCRL_RIGHT &trans          &trans
-                &trans          &mkp LCLK       &mkp MCLK          &mkp LCLK       &mkp RCLK
+                &trans          &mkp LCLK       &mkp MCLK       &mkp LCLK       &mkp RCLK
             >;
         };
 
@@ -154,7 +154,7 @@
                 &kp LSHFT       &kp LCTRL       &mmv MOVE_UP    &mkp RCLK       &mkp MCLK
                 &msc SCRL_UP    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT &trans
                 &msc SCRL_DOWN  &msc SCRL_LEFT  &msc SCRL_RIGHT &trans          &trans
-                &trans          &mkp LCLK       &mkp MCLK          &mkp LCLK       &mkp RCLK
+                &trans          &mkp LCLK       &mkp MCLK       &mkp LCLK       &mkp RCLK
             >;
         };
 
@@ -168,7 +168,7 @@
                 &kp LSHFT       &kp LCTRL       &mmv MOVE_UP    &mkp RCLK       &mkp MCLK
                 &msc SCRL_UP    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT &trans
                 &msc SCRL_DOWN  &msc SCRL_LEFT  &msc SCRL_RIGHT &trans          &trans
-                &trans          &mkp LCLK       &mkp MCLK          &mkp LCLK       &mkp RCLK
+                &trans          &mkp LCLK       &mkp MCLK       &mkp LCLK       &mkp RCLK
             >;
         };
 
