@@ -8,8 +8,9 @@
     wood40_scroll_mapper: wood40_scroll_mapper {
         compatible = "zmk,input-processor-code-mapper";
         #input-processor-cells = <0>;
-        map = <INPUT_EV_REL INPUT_REL_X INPUT_EV_REL INPUT_REL_HWHEEL>,
-              <INPUT_EV_REL INPUT_REL_Y INPUT_EV_REL INPUT_REL_WHEEL>;
+        type = <INPUT_EV_REL>;
+        map = <INPUT_REL_X INPUT_REL_HWHEEL>,
+              <INPUT_REL_Y INPUT_REL_WHEEL>;
         track-remainders;
     };
 
