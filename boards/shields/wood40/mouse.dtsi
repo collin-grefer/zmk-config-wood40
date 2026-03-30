@@ -3,24 +3,22 @@
 #include <zephyr/dt-bindings/input/input-event-codes.h>
 #include <input/processors.dtsi>
 
+&zip_xy_to_scroll_mapper {
+    track-remainders;
+};
 
-/ {
-    wood40_scroll_mapper: wood40_scroll_mapper {
-        compatible = "zmk,input-processor-code-mapper";
-        #input-processor-cells = <0>;
-        type = <INPUT_EV_REL>;
-        map = <INPUT_REL_X INPUT_REL_HWHEEL>,
-              <INPUT_REL_Y INPUT_REL_WHEEL>;
-        track-remainders;
-    };
-
+ / {
     trackball_listener: trackball_listener {
         compatible = "zmk,input-listener";
         device = <&trackball>;
 
         scroller {
-            layers = <8>;  // LAYER_SCROLL
-            input-processors = <&zip_xy_scaler 1 8>, <&zip_xy_transform 1 0 0 (0 - 1)>, <&wood40_scroll_mapper>;
+            layers = <8>;
+            input-processors = <
+                &zip_xy_to_scroll_mapper
+                &zip_scroll_transform INPUT_TRANSFORM_Y_INVERT
+                &zip_scroll_scaler 1 8
+            >;
         };
 
         cpi_low {
