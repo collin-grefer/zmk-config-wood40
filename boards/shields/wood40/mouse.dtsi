@@ -3,41 +3,44 @@
 #include <zephyr/dt-bindings/input/input-event-codes.h>
 #include <input/processors.dtsi>
 
-/* Dedicated tracked mapper for scroll layer */
-wood40_scroll_mapper: wood40_scroll_mapper {
-    compatible = "zmk,input-processor-code-mapper";
-    #input-processor-cells = <0>;
-    mappings = <INPUT_REL_X INPUT_REL_HWHEEL>,
-               <INPUT_REL_Y INPUT_REL_WHEEL>;
-    track-remainders;
-};
 
 / {
+    /* Dedicated tracked mapper for scroll layer */
+    wood40_scroll_mapper: wood40_scroll_mapper {
+        compatible = "zmk,input-processor-code-mapper";
+        #input-processor-cells = <0>;
+        type = <INPUT_EV_REL>;
+        codes = <INPUT_REL_X INPUT_REL_Y>;
+        output-codes = <INPUT_REL_HWHEEL INPUT_REL_WHEEL>;
+        track-remainders;
+    };
+
     trackball_listener: trackball_listener {
         compatible = "zmk,input-listener";
         device = <&trackball>;
-
+        
         scroller {
             layers = <8>;  // LAYER_SCROLL
             input-processors = <&zip_xy_scaler 1 8>, <&zip_xy_transform 1 0 0 (0 - 1)>, <&wood40_scroll_mapper>;
         };
-
+        
         cpi_low {
             layers = <9>;  // LAYER_CPI_LOW
             input-processors = <&zip_xy_scaler 1 12>;
         };
-
+        
         cpi_mid {
             layers = <10>;  // LAYER_CPI_MID
             input-processors = <&zip_xy_scaler 1 6>;
         };
-
+        
         cpi_high {
             layers = <11>;  // LAYER_CPI_HIGH
             input-processors = <&zip_xy_scaler 2 1>;
         };
     };
 };
+
 
 &pinctrl {
     spi0_default: spi0_default {
