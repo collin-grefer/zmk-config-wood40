@@ -3,6 +3,10 @@
 #include <zephyr/dt-bindings/input/input-event-codes.h>
 #include <input/processors.dtsi>
 
+&zip_xy_to_scroll_mapper {
+    track-remainders = <0>;
+};
+
 / {
     trackball_listener: trackball_listener {
         compatible = "zmk,input-listener";
