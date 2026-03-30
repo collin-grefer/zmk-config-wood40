@@ -4,7 +4,7 @@
 #include <input/processors.dtsi>
 
 &zip_xy_to_scroll_mapper {
-    track-remainders = <0>;
+    track-remainders;
 };
 
 / {
