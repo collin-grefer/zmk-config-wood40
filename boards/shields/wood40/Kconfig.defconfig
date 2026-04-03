@@ -2,9 +2,6 @@ if SHIELD_WOOD40_RIGHT
     config ZMK_KEYBOARD_NAME
         default "wood40"
 
-    config ZMK_SPLIT_ROLE_CENTRAL
-        default y
-
     config SPI
         default y
     config INPUT
@@ -13,13 +10,17 @@ if SHIELD_WOOD40_RIGHT
         default y
     config ZMK_MOUSE
         default y
-
-    # PMW driver selection is set in wood40_right.conf:
-    # CONFIG_PMW3610_ALT=y
-
 endif
 
-if SHIELD_WOOD40_LEFT || SHIELD_WOOD40_RIGHT
+if SHIELD_WOOD40_DONGLE
+    config ZMK_KEYBOARD_NAME
+        default "wood40"
+
+    config ZMK_SPLIT_ROLE_CENTRAL
+        default y
+endif
+
+if SHIELD_WOOD40_LEFT || SHIELD_WOOD40_RIGHT || SHIELD_WOOD40_DONGLE
     config ZMK_SPLIT
         default y
 endif

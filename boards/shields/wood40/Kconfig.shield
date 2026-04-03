@@ -6,3 +6,6 @@ config SHIELD_WOOD40_LEFT
 
 config SHIELD_WOOD40_RIGHT
     def_bool $(shields_list_contains,wood40_right)
+
+config SHIELD_WOOD40_DONGLE
+    def_bool $(shields_list_contains,wood40_dongle)

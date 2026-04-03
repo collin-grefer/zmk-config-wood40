@@ -25,4 +25,10 @@ include:
   - board: nice_nano
     shield: wood40_right
     artifact-name: wood40_right
+  - board: nice_nano
+    shield: wood40_dongle
+    artifact-name: wood40_dongle
+  - board: nice_nano
+    shield: settings_reset
+    artifact-name: reset
     # snippet: zmk-usb-logging
