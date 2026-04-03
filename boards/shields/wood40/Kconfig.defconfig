@@ -14,7 +14,7 @@ endif
 
 if SHIELD_WOOD40_DONGLE
     config ZMK_KEYBOARD_NAME
-        default "wood40"
+        default "wood40_dongle"
 
     config ZMK_SPLIT_ROLE_CENTRAL
         default y
