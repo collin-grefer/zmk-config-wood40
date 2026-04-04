@@ -2,6 +2,7 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 #include <zephyr/dt-bindings/pinctrl/nrf-pinctrl.h>
 #include "mouse.dtsi"
+#include "split_input.dtsi"
 
 / {
     chosen {
@@ -69,4 +70,9 @@ nice_view_spi: &spi1 {
     pinctrl-names = "default", "sleep";
     cs-gpios = <&gpio0 29 GPIO_ACTIVE_LOW>;
     clock-frequency = <1000000>;
+};
+
+&trackball_split_input {
+    status = "okay";
+    device = <&trackball>;
 };

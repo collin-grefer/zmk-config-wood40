@@ -1,6 +1,7 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 #include <input/processors.dtsi>
 #include <dt-bindings/zmk/input_transform.h>
+#include "split_input.dtsi"
 
 / {
     chosen {
@@ -31,10 +32,9 @@
         >;
     };
 
-    trackball_split_listener: trackball_split_listener {
-        compatible = "zmk,input-listener";
-        device = <&trackball>;
-        
+    &trackball_split_listener {
+        status = "okay";
+
         scroller {
             layers = <8>;
             input-processors = <
