@@ -1,2 +1,23 @@
 
 .zmk/
+/zmk-config-kai-cosmos-dongle-main/.github/workflows/build.yml
+/zmk-config-kai-cosmos-dongle-main/boards/shields/cosmos/cosmos_dongle.overlay
+/zmk-config-kai-cosmos-dongle-main/boards/shields/cosmos/cosmos_left.overlay
+/zmk-config-kai-cosmos-dongle-main/boards/shields/cosmos/cosmos_right.overlay
+/zmk-config-kai-cosmos-dongle-main/boards/shields/cosmos/cosmos-layouts.dtsi
+/zmk-config-kai-cosmos-dongle-main/boards/shields/cosmos/cosmos.dtsi
+/zmk-config-kai-cosmos-dongle-main/boards/shields/cosmos/cosmos.zmk.yml
+/zmk-config-kai-cosmos-dongle-main/boards/shields/cosmos/Kconfig.defconfig
+/zmk-config-kai-cosmos-dongle-main/boards/shields/cosmos/Kconfig.shield
+/zmk-config-kai-cosmos-dongle-main/boards/shields/cosmos/pmw3610.dtsi
+/zmk-config-kai-cosmos-dongle-main/boards/shields/cosmos/split_input.dtsi
+/zmk-config-kai-cosmos-dongle-main/config/cosmos_dongle.conf
+/zmk-config-kai-cosmos-dongle-main/config/cosmos_left.conf
+/zmk-config-kai-cosmos-dongle-main/config/cosmos_right.conf
+/zmk-config-kai-cosmos-dongle-main/config/cosmos.conf
+/zmk-config-kai-cosmos-dongle-main/config/cosmos.keymap
+/zmk-config-kai-cosmos-dongle-main/config/info.json
+/zmk-config-kai-cosmos-dongle-main/config/west.yml
+/zmk-config-kai-cosmos-dongle-main/zephyr/module.yml
+/zmk-config-kai-cosmos-dongle-main/build.yaml
+/zmk-config-kai-cosmos-dongle-main/README.md

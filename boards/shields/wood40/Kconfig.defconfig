@@ -1,7 +1,12 @@
-if SHIELD_WOOD40_RIGHT
+if SHIELD_WOOD40_LEFT || SHIELD_WOOD40_RIGHT || SHIELD_WOOD40_DONGLE
     config ZMK_KEYBOARD_NAME
         default "wood40"
 
+    config ZMK_SPLIT
+        default y
+endif
+
+if SHIELD_WOOD40_RIGHT
     config SPI
         default y
     config INPUT
@@ -13,14 +18,6 @@ if SHIELD_WOOD40_RIGHT
 endif
 
 if SHIELD_WOOD40_DONGLE
-    config ZMK_KEYBOARD_NAME
-        default "wood40_dongle"
-
     config ZMK_SPLIT_ROLE_CENTRAL
-        default y
-endif
-
-if SHIELD_WOOD40_LEFT || SHIELD_WOOD40_RIGHT || SHIELD_WOOD40_DONGLE
-    config ZMK_SPLIT
         default y
 endif
