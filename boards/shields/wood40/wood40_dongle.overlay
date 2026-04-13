@@ -36,6 +36,11 @@
 &trackball_split_listener {
     status = "okay";
 
+    auto_mouse_home {
+        layers = <0>;                    // LAYER_HOME only
+        input-processors = <&zip_temp_layer 1 450>; // activate LAYER_MOUSE for 700ms after motion
+    };
+
     scroller {
         layers = <8>;
         input-processors = <
