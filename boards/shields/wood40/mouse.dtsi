@@ -36,7 +36,7 @@
         spi-max-frequency = <2000000>;
         irq-gpios = <&gpio0 22 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
 
-        cpi = <800>;
+        cpi = <650>;
 
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
@@ -45,7 +45,7 @@
         invert-y;
         invert-x;
 
-        force-awake;
+        // force-awake;
         // force-awake-4ms-mode; not recommended for wireless
     };
 };

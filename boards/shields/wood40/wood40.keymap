@@ -78,15 +78,15 @@
 
         home_layer {
             bindings = <
-                &kp DE_Z          &kp DE_Y                     &lt LAYER_NUMBLOCK DE_U       &lt LAYER_SYMBOLS1 DE_A         &mt LCTRL DE_Q
-                &kp DE_C          &kp DE_S                     &kp DE_I                      &kp DE_E                        &lt LAYER_FUNCTION DE_O
-                &kp DE_V          &kp DE_X                     &kp DE_U_UMLAUT               &lt LAYER_SYMBOLS2 DE_A_UMLAUT  &mt LALT ESC
-                &kp DE_SHARP_S    &lt LAYER_SCROLL DE_MINUS    &mt LSHFT DE_O_UMLAUT         &lt LAYER_ARROW SPACE           &lt LAYER_MOUSE TAB
+                &kp DE_Z           &kp DE_Y                     &lt LAYER_NUMBLOCK DE_U       &lt LAYER_SYMBOLS1 DE_A         &mt LCTRL DE_Q
+                &kp DE_C           &kp DE_S                     &kp DE_I                      &kp DE_E                        &lt LAYER_FUNCTION DE_O
+                &kp DE_V           &kp DE_X                     &kp DE_U_UMLAUT               &lt LAYER_SYMBOLS2 DE_A_UMLAUT  &mt LALT ESC
+                &to LAYER_CPI_LOW  &lt LAYER_SCROLL DE_MINUS    &lt LAYER_ARROW DE_O_UMLAUT   &mt LSHFT SPACE                 &lt LAYER_MOUSE TAB
 
                 &mt RCTRL DE_P    &lt LAYER_MEDIA DE_B  &kp DE_M           &kp DE_L        &mt LGUI DE_SHARP_S
                 &kp DE_D          &kp DE_T              &kp DE_N           &kp DE_R        &kp DE_H
                 &mt LALT RET      &kp DE_G              &kp DE_F           &kp DE_J        &kp DE_K
-                &kp DEL           &kp BSPC              &mt RSHFT DE_W     &kp DE_COMMA    &kp DE_DOT
+                &kp DEL           &mt RSHFT BSPC        &kp DE_W           &kp DE_COMMA    &kp DE_DOT
             >;
         };
 
@@ -208,6 +208,7 @@
                 &trans              &trans              &mkp RCLK           &mkp LCLK           &mkp MCLK
                 &trans              &mo LAYER_SCROLL    &mkp MB4            &mkp MB5            &trans
                 &to LAYER_HOME     &trans              &trans              &trans              &tog LAYER_CPI_LOW
+
                 &kp LSHFT           &kp LCTRL           &mmv MOVE_UP        &mkp RCLK           &mkp MCLK
                 &msc SCRL_UP        &mmv MOVE_LEFT      &mmv MOVE_DOWN      &mmv MOVE_RIGHT     &trans
                 &msc SCRL_DOWN      &msc SCRL_LEFT      &msc SCRL_RIGHT     &trans              &trans
@@ -221,6 +222,7 @@
                 &trans              &trans              &mkp RCLK           &mkp LCLK           &mkp MCLK
                 &trans              &mo LAYER_SCROLL    &mkp MB4            &mkp MB5            &trans
                 &to LAYER_HOME     &trans              &trans              &trans              &tog LAYER_CPI_MID
+
                 &kp LSHFT           &kp LCTRL           &mmv MOVE_UP        &mkp RCLK           &mkp MCLK
                 &msc SCRL_UP        &mmv MOVE_LEFT      &mmv MOVE_DOWN      &mmv MOVE_RIGHT     &trans
                 &msc SCRL_DOWN      &msc SCRL_LEFT      &msc SCRL_RIGHT     &trans              &trans
@@ -234,6 +236,7 @@
                 &trans              &trans              &mkp RCLK           &mkp LCLK           &mkp MCLK
                 &trans              &mo LAYER_SCROLL    &mkp MB4            &mkp MB5            &trans
                 &to LAYER_HOME     &trans              &trans              &trans              &tog LAYER_CPI_HIGH
+
                 &kp LSHFT           &kp LCTRL           &mmv MOVE_UP        &mkp RCLK           &mkp MCLK
                 &msc SCRL_UP        &mmv MOVE_LEFT      &mmv MOVE_DOWN      &mmv MOVE_RIGHT     &trans
                 &msc SCRL_DOWN      &msc SCRL_LEFT      &msc SCRL_RIGHT     &trans              &trans
